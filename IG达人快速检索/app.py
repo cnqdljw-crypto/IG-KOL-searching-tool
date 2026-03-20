@@ -22,7 +22,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(
 )
 
 client = gspread.authorize(credentials)
-sheet = client.open("KOL_DB").sheet1  # 你的表名字
+sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/17ZiBYGG5XwdVce5CgjPoNc1x5MsitsIg9KWqu7AdO9U/edit?gid=0#gid=0").sheet1
 
 # ====== 配置 ======
 CPM_MIN = 10
